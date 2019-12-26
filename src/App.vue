@@ -1,5 +1,5 @@
 <template>
-<v-app id="inspire">
+<v-app>
   <v-navigation-drawer v-model="drawer" app>
     <v-list dense>
       <v-list-item link to="/">
@@ -22,7 +22,7 @@
     </v-list>
   </v-navigation-drawer>
 
-  <v-app-bar app color="indigo" dark>
+  <v-app-bar app color="primary" dark>
     <v-app-bar-nav-icon @click.stop="drawer = !drawer"/>
     <v-toolbar-title>Cognito User Admin</v-toolbar-title>
   </v-app-bar>
@@ -32,7 +32,8 @@
       <router-view></router-view>
     </v-container>
   </v-content>
-  <v-footer color="indigo" app>
+
+  <v-footer color="footer" app>
     <span class="white--text">&copy; 2019</span>
   </v-footer>
 </v-app>
