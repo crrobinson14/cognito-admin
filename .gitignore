@@ -10,11 +10,13 @@ geckodriver.log
 # local env files
 .env.local
 .env.*.local
+config.json
 
 # Log files
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+test.txt
 
 # Editor directories and files
 .idea
