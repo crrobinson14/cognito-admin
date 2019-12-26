@@ -13,7 +13,8 @@
       ></v-text-field>
     </v-card-title>
 
-    <v-data-table :headers="headers" :items="users" :items-per-page="25" class="elevation-1" :search="search" :loading="loading">
+    <v-data-table :headers="headers" :items="users" :items-per-page="1" class="elevation-1" :search="search" :loading="loading"
+                  :footer-props="{ showFirstLastPage: true, itemsPerPageOptions: [1,5,25,-1] }">
       <template v-slot:item.Email="{ item }">
       <v-icon v-if="item.Attributes.find(({ Name }) => Name === 'email_verified').Value === 'true'" color="green">mdi-check-circle</v-icon>
       <v-icon v-if="item.Attributes.find(({ Name }) => Name === 'email_verified').Value !== 'true'" color="grey">minus-circle</v-icon>

@@ -18,3 +18,17 @@ directly - it doesn't have an internal API of its own. It's therefore not able t
 that as a good thing. The credentials you provide don't need to be a global admin user for your Amazon account. It just needs admin access
 to the specific Cognito User Pool you want to administer. That means you can set up a special user and IAM role just for this purpose, with
 only those permissions required to administer the pool you want. I strongly recommend that you do this.  
+
+## Docker
+
+This project includes a Docker file, meaning you can run this project without Node / Yarn installed. You should still create
+`config.json` as described above first, then run:
+
+    docker build -t cognito-admin .
+    docker run -p 8080:8080 -d cognito-admin
+
+One caveat is that this method will require a rebuild for any future updates.
+
+*NOTE: I do not recommend using this method as a means of deployment! This project has no provisions for controlling access to it.
+It was intended to be run locally in a trusted environment (your workstation), not hosted on a server.* 
+
