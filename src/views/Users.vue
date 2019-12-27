@@ -165,9 +165,14 @@ export default class Users extends Vue {
 			// PaginationToken: 'STRING_VALUE'
 		};
 		cognitoidentityserviceprovider.listUsers(params, (err, data: any) => {
-			if (err) console.log(err, err.stack); // an error occurred
-			else console.log(data);           // successful response
-			this.users = data.Users || [];
+			if (err) {
+				console.log('err', err.message);
+				console.log(err, err.stack); // an error occurred
+				this.$dialog.message.error(err.message, { position: 'top-center', timeout: 3000 });
+			} else {
+				this.users = data.Users || [];
+			}
+
 			this.loading = false;
 		});
 	}
@@ -190,7 +195,7 @@ export default class Users extends Vue {
 				console.log('err', err.message);
 				console.log(err, err.stack); // an error occurred
 				this.$dialog.message.error(err.message, { position: 'top-center', timeout: 3000 });
-			}	else {
+			} else {
 				console.log('Reset result', data);
 				this.$dialog.message.info('User will need to reset password on next login.', { position: 'top-center', timeout: 3000 });
 			}
