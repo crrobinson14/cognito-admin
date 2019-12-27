@@ -9277,6 +9277,11 @@ vue@^2.6.10:
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.6.11.tgz#76594d877d4b12234406e84e35275c6d514125c5"
   integrity sha512-VfPwgcGABbGAue9+sfrD4PuwFar7gPb1yl1UK1MwXoQPAw0BKSqWfoYCT/ThFrdEVWoI51dBuyCoiNU9bZDZxQ==
 
+vuetify-dialog@^2.0.0-rc.2:
+  version "2.0.0-rc.2"
+  resolved "https://registry.yarnpkg.com/vuetify-dialog/-/vuetify-dialog-2.0.0-rc.2.tgz#b27d6aa932a6d8d7862769a59e0e99e527e5f542"
+  integrity sha512-ltJPWqdb0cpKOdudiI6rTbfrC/vMRJ2rOuelgReUZiRoe1C3W0zTs45Mfgn3ZTKujrV4y5YqAGUUhiSjG+7/SA==
+
 vuetify-loader@^1.3.0:
   version "1.4.3"
   resolved "https://registry.yarnpkg.com/vuetify-loader/-/vuetify-loader-1.4.3.tgz#df1323c558be09890877e5fbe817b3a71a6c538d"
