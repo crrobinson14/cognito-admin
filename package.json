@@ -10,7 +10,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "aws-sdk": "^2.596.0",
+    "aws-sdk": "^2.814.0",
     "core-js": "^3.4.3",
     "moment": "^2.24.0",
     "vue": "^2.6.10",
